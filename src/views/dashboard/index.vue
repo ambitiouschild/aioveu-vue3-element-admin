@@ -13,7 +13,7 @@
           />
           <div class="ml-5">
             <p>{{ greetings }}</p>
-            <p class="text-sm text-gray">今日天气晴朗，气温在15℃至25℃之间，东南风。</p>
+            <p class="text-sm text-gray">我爱飞飞 今日天气晴朗，气温在15℃至25℃之间，东南风。</p>
           </div>
         </div>
 
@@ -397,22 +397,22 @@ const vesionList = ref<VersionItem[]>([
     id: "1",
     title: "v3.0.0",
     date: "2025-06-06 00:00:00",
-    content: "布局重写，代码规范重构。",
+    content: "一生所爱。",
     link: "https://gitee.com/youlaiorg/vue3-element-admin/releases",
     tag: "里程碑",
   },
   {
     id: "2",
     title: "v2.4.0",
-    date: "2021-09-01 00:00:00",
-    content: "实现基础框架搭建，包含权限管理、路由系统等核心功能。",
+    date: "2024-09-01 00:00:00",
+    content: "真爱至上。",
     link: "https://gitee.com/youlaiorg/vue3-element-admin/releases",
     tag: "里程碑",
   },
   {
     id: "3",
     title: "v2.4.0",
-    date: "2021-09-01 00:00:00",
+    date: "2023-09-01 00:00:00",
     content: "实现基础框架搭建，包含权限管理、路由系统等核心功能。",
     link: "https://gitee.com/youlaiorg/vue3-element-admin/releases",
     tag: "里程碑",
