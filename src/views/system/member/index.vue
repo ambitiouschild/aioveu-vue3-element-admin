@@ -141,58 +141,83 @@
         width="500px"
         @close="handleCloseDialog"
     >
-      <el-form ref="dataFormRef" :model="formData" :rules="rules" label-width="100px">
-                <el-form-item label="会员编号" prop="id">
-                      <el-input
-                          v-model="formData.id"
-                          placeholder="会员编号"
-                      />
-                </el-form-item>
-
+      <el-form ref="dataFormRef" :model="formData" :rules="formRules" label-width="100px">
+               <!-- 会员编号 - 仅在编辑模式显示 -->
+        <!--   <el-form-item label="会员编号" prop="id">
+                 <el-input
+                     v-model="formData.id"
+                     placeholder="会员编号"
+                 />
+           </el-form-item>
+        -->
+           <!-- 会员姓名 -->
                 <el-form-item label="会员姓名" prop="name">
                       <el-input
                           v-model="formData.name"
-                          placeholder="会员姓名"
+                          placeholder="请输入会员姓名"
+                          clearable
                       />
                 </el-form-item>
 
+                <!-- 会员手机号 -->
                 <el-form-item label="会员手机号" prop="mobile">
                       <el-input
                           v-model="formData.mobile"
-                          placeholder="会员手机号"
-                      />
+                          placeholder="请输入11位会员手机号"
+                          maxlength="11"
+                          clearable
+                      >
+                        <template #prefix>
+                          <i class="el-icon-phone"></i>
+                        </template>
+                      </el-input>
                 </el-form-item>
 
+                <!-- 性别 -->
                 <el-form-item label="性别" prop="gender">
-                      <el-input
-                          v-model="formData.gender"
-                          placeholder="性别"
-                      />
+                      <Dict  v-model="formData.gender" code="gender" />
                 </el-form-item>
 
+                <!-- 会员年龄 -->
                 <el-form-item label="会员年龄" prop="age">
-                          <dict v-model="formData.age" code="gender" />
+                  <el-input-number
+                    v-model="formData.age"
+                    :min="0"
+                    :max="150"
+                    placeholder="请输入年龄"
+                    controls-position="right"
+                  />
                 </el-form-item>
 
-                <el-form-item label="创建时间" prop="createTime">
-                      <el-input
+                <!-- 创建时间 - 仅在编辑模式显示 -->
+                <el-form-item  label="创建时间" prop="createTime">
+                      <el-date-picker
                           v-model="formData.createTime"
+                          type="datetime"
                           placeholder="创建时间"
+                          format="YYYY-MM-DD HH:mm"
+                          value-format="YYYY-MM-DDTHH:mm:ssZ"
+                          disabled
                       />
                 </el-form-item>
 
-                <el-form-item label="更新时间" prop="updateTime">
-                      <el-input
+        <!-- 更新时间 - 仅在编辑模式显示 -->
+                <el-form-item  label="更新时间" prop="updateTime">
+                      <el-date-picker
                           v-model="formData.updateTime"
+                          type="datetime"
                           placeholder="更新时间"
+                          format="YYYY-MM-DD HH:mm"
+                          value-format="YYYY-MM-DDTHH:mm:ssZ"
+                          disabled
                       />
                 </el-form-item>
 
+                <!-- 是否删除 - 仅在编辑模式显示 -->
                 <el-form-item label="是否删除(1:已删除;0:未删除)" prop="isDeleted">
-                      <el-input
-                          v-model="formData.isDeleted"
-                          placeholder="是否删除(1:已删除;0:未删除)"
-                      />
+                  <el-tag :type="formData.isDeleted ? 'danger' : 'success'">
+                    {{ formData.isDeleted ? '已删除' : '正常' }}
+                  </el-tag>
                 </el-form-item>
 
       </el-form>
@@ -202,6 +227,7 @@
           <el-button @click="handleCloseDialog()">取消</el-button>
         </div>
       </template>
+
     </el-dialog>
   </div>
 </template>
@@ -214,6 +240,9 @@
 
   import MemberAPI, { MemberPageVO, MemberForm, MemberPageQuery } from "@/api/system/member";
 
+  // 添加类型导入
+  import type { FormRules } from 'element-plus'
+
   const queryFormRef = ref();
   const dataFormRef = ref();
 
@@ -221,10 +250,12 @@
   const removeIds = ref<number[]>([]);
   const total = ref(0);
 
+
   const queryParams = reactive<MemberPageQuery>({
     pageNum: 1,
     pageSize: 10,
   });
+
 
   // 会员信息表格数据
   const pageData = ref<MemberPageVO[]>([]);
@@ -238,9 +269,22 @@
   // 会员信息表单数据
   const formData = reactive<MemberForm>({});
 
-  // 会员信息表单校验规则
-  const rules = reactive({
-                      id: [{ required: true, message: "请输入会员编号", trigger: "blur" }],
+  // 会员信息表单校验规则 表单验证规则
+  const formRules  = reactive<FormRules>({
+    name: [
+      { required: true, message: '请输入会员姓名', trigger: 'blur' },
+      { min: 2, max: 20, message: '长度在2到20个字符', trigger: 'blur' }
+    ],
+    mobile: [
+      { required: true, message: '请输入手机号码', trigger: 'blur' },
+      { pattern: /^1[3-9]\d{9}$/, message: '请输入正确的手机号码', trigger: 'blur' }
+    ],
+    age: [
+      { type: 'number', min: 0, max: 150, message: '年龄在0-150之间', trigger: 'blur' }
+    ],
+    gender: [
+      { required: true, message: '请选择性别', trigger: 'change' }
+    ]
   });
 
   /** 查询会员信息 */
@@ -288,19 +332,37 @@
         loading.value = true;
         const id = formData.id;
         if (id) {
+          // 更新操作
                 MemberAPI.update(id, formData)
               .then(() => {
-                ElMessage.success("修改成功");
+                ElMessage.success("会员信息修改成功");
                 handleCloseDialog();
                 handleResetQuery();
               })
+              .catch(error => {
+                // 根据错误类型显示不同消息
+                if (error?.response?.status === 404) {
+                  ElMessage.error("会员不存在或已被删除");
+                } else {
+                  ElMessage.error("更新失败：" + (error.message || "请稍后重试"));
+                }
+              })
               .finally(() => (loading.value = false));
         } else {
+          // 新增操作
                 MemberAPI.add(formData)
               .then(() => {
-                ElMessage.success("新增成功");
+                ElMessage.success("会员新增成功");
                 handleCloseDialog();
                 handleResetQuery();
+              })
+              .catch(error => {
+                // 处理可能的手机号重复等错误
+                if (error?.response?.data?.code === 1001) {
+                  ElMessage.error("手机号已存在");
+                } else {
+                  ElMessage.error("创建失败：" + (error.message || "请稍后重试"));
+                }
               })
               .finally(() => (loading.value = false));
         }

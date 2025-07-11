@@ -33,7 +33,7 @@ const MemberAPI = {
         return request({
             url: `${MEMBER_BASE_URL}`,
             method: "post",
-            data: data,
+            data,  //data, //这个ESLint错误是object-shorthand规则触发的，表示需要改用简写的对象属性语法。
         });
     },
 
@@ -47,7 +47,7 @@ const MemberAPI = {
         return request({
             url: `${MEMBER_BASE_URL}/${id}`,
             method: "put",
-            data: data,
+            data,
         });
     },
 
