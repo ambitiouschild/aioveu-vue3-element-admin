@@ -72,12 +72,20 @@
                         prop="gender"
                         min-width="150"
                         align="center"
-                    />
-                    <el-table-column label="会员年龄" width="150" align="center">
+                    >
                       <template #default="scope">
-                        <DictLabel v-model="scope.row.age" code="gender" />
+                        <DictLabel v-model="scope.row.gender" code="gender"/>
                       </template>
+
                     </el-table-column>
+                    <el-table-column
+                       key="age"
+                       label="会员年龄"
+                       prop="age"
+                       width="150"
+                       align="center"
+                    />
+
                     <el-table-column
                         key="createTime"
                         label="创建时间"
