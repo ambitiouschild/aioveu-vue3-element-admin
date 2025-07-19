@@ -118,8 +118,8 @@ interface Model extends LoginFormData {
 }
 
 const model = ref<Model>({
-  username: "admin",
-  password: "123456",
+  username: "aioveu",
+  password: "775825",
   confirmPassword: "",
   captchaKey: "",
   captchaCode: "",
