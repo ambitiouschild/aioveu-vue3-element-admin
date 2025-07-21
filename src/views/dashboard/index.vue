@@ -27,15 +27,15 @@
                 仓库
               </div>
               <div class="mt-3 whitespace-nowrap">
-                <el-link href="https://gitee.com/youlaiorg/vue3-element-admin" target="_blank">
+                <el-link href="https://gitee.com/ambitiouschild" target="_blank">
                   <div class="i-svg:gitee text-lg color-#F76560" />
                 </el-link>
                 <el-divider direction="vertical" />
-                <el-link href="https://github.com/youlaitech/vue3-element-admin" target="_blank">
+                <el-link href="https://github.com/ambitiouschild/aioveu-vue3-element-admin" target="_blank">
                   <div class="i-svg:github text-lg color-#4080FF" />
                 </el-link>
                 <el-divider direction="vertical" />
-                <el-link href="https://gitcode.com/youlai/vue3-element-admin" target="_blank">
+                <el-link href="https://gitcode.com/ambitiouschild" target="_blank">
                   <div class="i-svg:gitcode text-lg color-#FF9A2E" />
                 </el-link>
               </div>
@@ -48,18 +48,18 @@
                 文档
               </div>
               <div class="mt-3 whitespace-nowrap">
-                <el-link href="https://juejin.cn/post/7228990409909108793" target="_blank">
+                <el-link href="https://github.com/ambitiouschild/aioveu-vue3-element-admin" target="_blank">
                   <div class="i-svg:juejin text-lg" />
                 </el-link>
                 <el-divider direction="vertical" />
                 <el-link
-                  href="https://youlai.blog.csdn.net/article/details/130191394"
+                  href="https://github.com/ambitiouschild/aioveu-vue3-element-admin"
                   target="_blank"
                 >
                   <div class="i-svg:csdn text-lg" />
                 </el-link>
                 <el-divider direction="vertical" />
-                <el-link href="https://www.cnblogs.com/haoxianrui/p/17331952.html" target="_blank">
+                <el-link href="https://github.com/ambitiouschild/aioveu-vue3-element-admin" target="_blank">
                   <div class="i-svg:cnblogs text-lg" />
                 </el-link>
               </div>
@@ -72,7 +72,7 @@
                 视频
               </div>
               <div class="mt-3 whitespace-nowrap">
-                <el-link href="https://www.bilibili.com/video/BV1eFUuYyEFj" target="_blank">
+                <el-link href="https://space.bilibili.com/166652098?spm_id_from=333.337.0.0" target="_blank">
                   <div class="i-svg:bilibili text-lg" />
                 </el-link>
               </div>
@@ -84,29 +84,29 @@
         <div class="w-full sm:hidden mt-3">
           <div class="flex justify-end space-x-4 overflow-x-auto">
             <!-- 仓库图标 -->
-            <el-link href="https://gitee.com/youlaiorg/vue3-element-admin" target="_blank">
+            <el-link href="https://gitee.com/ambitiouschild" target="_blank">
               <div class="i-svg:gitee text-lg color-#F76560" />
             </el-link>
-            <el-link href="https://github.com/youlaitech/vue3-element-admin" target="_blank">
+            <el-link href="https://github.com/ambitiouschild/aioveu-vue3-element-admin" target="_blank">
               <div class="i-svg:github text-lg color-#4080FF" />
             </el-link>
-            <el-link href="https://gitcode.com/youlai/vue3-element-admin" target="_blank">
+            <el-link href="https://gitcode.com/ambitiouschild" target="_blank">
               <div class="i-svg:gitcode text-lg color-#FF9A2E" />
             </el-link>
 
             <!-- 文档图标 -->
-            <el-link href="https://juejin.cn/post/7228990409909108793" target="_blank">
+            <el-link href="https://github.com/ambitiouschild/aioveu-vue3-element-admin" target="_blank">
               <div class="i-svg:juejin text-lg" />
             </el-link>
-            <el-link href="https://youlai.blog.csdn.net/article/details/130191394" target="_blank">
+            <el-link href="https://github.com/ambitiouschild/aioveu-vue3-element-admin" target="_blank">
               <div class="i-svg:csdn text-lg" />
             </el-link>
-            <el-link href="https://www.cnblogs.com/haoxianrui/p/17331952.html" target="_blank">
+            <el-link href="https://github.com/ambitiouschild/aioveu-vue3-element-admin" target="_blank">
               <div class="i-svg:cnblogs text-lg" />
             </el-link>
 
             <!-- 视频图标 -->
-            <el-link href="https://www.bilibili.com/video/BV1eFUuYyEFj" target="_blank">
+            <el-link href="https://space.bilibili.com/166652098?spm_id_from=333.337.0.0" target="_blank">
               <div class="i-svg:bilibili text-lg" />
             </el-link>
           </div>
