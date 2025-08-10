@@ -136,7 +136,7 @@ const rememberMe = Auth.getRememberMe();
 
 const loginFormData = ref<LoginFormData>({
   username: "aioveu",
-  password: "775825",
+  password: "aioveu",
   captchaKey: "",
   captchaCode: "",
   rememberMe,

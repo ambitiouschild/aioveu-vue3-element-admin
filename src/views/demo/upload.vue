@@ -2,7 +2,7 @@
 <template>
   <div class="app-container">
     <el-link
-      href="https://gitee.com/youlaiorg/vue3-element-admin/blob/master/src/views/demo/upload.vue"
+      href="https://github.com/ambitiouschild/aioveu-vue3-element-admin/blob/master/src/views/demo/upload.vue"
       type="primary"
       target="_blank"
       class="mb-10"
@@ -30,11 +30,12 @@
 import MultiImageUpload from "@/components/Upload/MultiImageUpload.vue";
 
 // 单图
-const picUrl = ref("https://s2.loli.net/2023/05/24/yNsxFC8rLHMZQcK.jpg");
-const picUrls = ref(["https://s2.loli.net/2023/05/24/yNsxFC8rLHMZQcK.jpg"]);
+const picUrl = ref("https://minio.aioveu.com/aioveu/20250810/352485413d814dee87d9b7160dfe916e.png");
+const picUrls = ref(["https://minio.aioveu.com/aioveu/20250810/352485413d814dee87d9b7160dfe916e.png",
+  "https://minio.aioveu.com/aioveu/20250810/352485413d814dee87d9b7160dfe916e.png"]);
 
 const fileUrls = ref([
-  { name: "照片1.jpg", url: "https://s2.loli.net/2023/05/24/yNsxFC8rLHMZQcK.jpg" },
-  { name: "照片2.jpg", url: "https://s2.loli.net/2023/05/24/RuHFMwW4rG5lIqs.jpg" },
+  { name: "照片1.jpg", url: "https://minio.aioveu.com/aioveu/20250810/352485413d814dee87d9b7160dfe916e.png" },
+  { name: "照片2.jpg", url: "https://minio.aioveu.com/aioveu/20250810/352485413d814dee87d9b7160dfe916e.png" },
 ]);
 </script>

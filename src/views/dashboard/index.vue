@@ -296,7 +296,7 @@
               <el-link
                 type="primary"
                 underline="never"
-                href="https://gitee.com/youlaiorg/vue3-element-admin/releases"
+                href="https://github.com/ambitiouschild/aioveu-vue3-element-admin/releases"
                 target="_blank"
               >
                 完整记录
@@ -398,7 +398,7 @@ const vesionList = ref<VersionItem[]>([
     title: "v3.0.0",
     date: "2025-06-06 00:00:00",
     content: "一生所爱。",
-    link: "https://gitee.com/youlaiorg/vue3-element-admin/releases",
+    link: "https://github.com/ambitiouschild/aioveu-vue3-element-admin/releases",
     tag: "里程碑",
   },
   {
@@ -406,7 +406,7 @@ const vesionList = ref<VersionItem[]>([
     title: "v2.4.0",
     date: "2024-09-01 00:00:00",
     content: "真爱至上。",
-    link: "https://gitee.com/youlaiorg/vue3-element-admin/releases",
+    link: "https://github.com/ambitiouschild/aioveu-vue3-element-admin/releases",
     tag: "里程碑",
   },
   {
@@ -414,7 +414,7 @@ const vesionList = ref<VersionItem[]>([
     title: "v2.4.0",
     date: "2023-09-01 00:00:00",
     content: "实现基础框架搭建，包含权限管理、路由系统等核心功能。",
-    link: "https://gitee.com/youlaiorg/vue3-element-admin/releases",
+    link: "https://github.com/ambitiouschild/aioveu-vue3-element-admin/releases",
     tag: "里程碑",
   },
 ]);
