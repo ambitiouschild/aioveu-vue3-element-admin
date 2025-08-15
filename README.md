@@ -20,7 +20,7 @@
 ## 项目特色
 
 - **简洁易用**：基于 [vue-element-admin](https://github.com/ambitiouschild/aioveu-vue3-element-admin) 升级的 Vue3 版本，无过渡封装 ，易上手。
-- **数据交互**： 支持 `Mock` 数据和[线上接口文档](https://www.apifox.cn/apidoc/shared-195e783f-4d85-4235-a038-eec696de4ea5)，并提供配套的 [Java](https://github.com/ambitiouschild/aioveu-boot) 和 [Node](https://gitee.com/youlaiorg/youlai-nest) 后端源码。
+- **数据交互**： 支持 `Mock` 数据和线上接口文档，并提供配套的 [Java](https://github.com/ambitiouschild/aioveu-boot) 和 [Node](https://gitee.com/youlaiorg/youlai-nest) 后端源码。
 
 - **系统功能：** 提供用户管理、角色管理、菜单管理、部门管理、字典管理等功能模块。
 - **权限管理：** 支持动态路由、按钮权限、角色权限和数据权限等多种权限管理方式。
@@ -33,15 +33,15 @@
 
 🖥️ **控制台**
 
-![](https://www.youlai.tech/storage/blog/2025/04/30/20250430085342.png)
+
 
 ⚡**接口文档**
 
-![](https://www.youlai.tech/storage/blog/2025/01/18/20250118183539.png)
+
 
 📲 **移动端**
 
-![](https://www.youlai.tech/storage/blog/2025/04/30/app.jpg)
+
 
 ## 项目源码
 
@@ -65,7 +65,7 @@
 | 官方文档 | [https://www.youlai.tech/vue3-element-admin/](https://www.youlai.tech/vue3-element-admin/)  |
 | 代码规范     | [ESLint V9 + Prettier + Stylelint + EditorConfig 约束和统一前端代码规范](https://youlai.blog.csdn.net/article/details/145608723) |
 | 提交规范 | [Husky + Lint-staged + Commitlint + Commitizen + cz-git 配置 Git 提交规范](https://youlai.blog.csdn.net/article/details/145615236) |
-| 接口文档 | [https://www.apifox.cn/apidoc/shared-195e783f-4d85-4235-a038-eec696de4ea5](https://www.apifox.cn/apidoc/shared-195e783f-4d85-4235-a038-eec696de4ea5) |
+| 接口文档 |                                                              |
 
 
 
@@ -339,8 +339,8 @@ server {
 
     # 反向代理配置
     location /prod-api/ {
-        # 请将 api.youlai.tech 替换为您的后端 API 地址，并注意保留后面的斜杠 /
-        proxy_pass http://api.youlai.tech/;
+        # 请将 api.aioveu.com 替换为您的后端 API 地址，并注意保留后面的斜杠 /
+        proxy_pass http://api.aioveu.com/;
     }
 }
 ```
@@ -404,24 +404,13 @@ Mock在软件开发中通常指的是模拟对象或模拟数据，用来替代�
 ![](https://foruda.gitee.com/images/1687755823165218215/c1705416_716974.png)
 
 
-## 项目统计
 
-
-
-
-Thanks to all the contributors!
-
-
-## 特别感谢
-
-- 感谢 [GitCode](https://gitcode.com/) 官方的 [G-Star](https://gitcode.com/g-star) 认证
-  
 
 ## 加群交流
 
-① 关注「有来技术」公众号，点击菜单 **交流群** 获取加群二维码（此举防止广告进群，感谢理解和支持）。
+① 关注「可我不敌可爱」公众号，点击菜单 **交流群** 获取加群二维码。
 
-② 直接添加微信 **`haoxianrui`** 备注「前端/后端/全栈」。
+② 直接添加微信 **`ambitiouschild`** 备注「前端/后端/全栈」。
 
 | 公众号                                                       | 交流群                                                       |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
